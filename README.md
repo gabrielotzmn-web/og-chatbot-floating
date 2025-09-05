@@ -1,11 +1,16 @@
-[og-chatbot-floating.html](https://github.com/user-attachments/files/22164058/og-chatbot-floating.html)
+[!DOCTYPE.html](https://github.com/user-attachments/files/22182962/DOCTYPE.html)
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>OG Landscaping Chatbot</title>
   <style>
-    body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: transparent; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: transparent; /* transparente */
+    }
     #chat-toggle {
       position: fixed;
       bottom: 20px;
@@ -35,7 +40,7 @@
       padding: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       overflow-y: auto;
-      display: none;
+      display: none; /* oculto al inicio */
       flex-direction: column;
       z-index: 9999;
     }
@@ -69,10 +74,10 @@
 </head>
 <body>
 
-<!-- Floating Chat Bubble -->
-<div id="chat-toggle">💬</div>
+<!-- Burbuja de chat -->
+<div id="chat-toggle"></div>
 
-<!-- Chat Window -->
+<!-- Ventana del chat -->
 <div id="chatbox"></div>
 
 <script>
@@ -119,11 +124,11 @@ function startChat() {
   addMessage('bot', 'Hi! I am a virtual assistant of OG Landscaping. What can I do for you today?');
   addButtons([
     { label: "Get a Free Estimate", action: freeEstimate },
-    { label: "Contact Us", action: contactUs }
+    { label: "schedule an appointment", action: scheduleanappointment }
   ]);
 }
 
-function contactUs() {
+function scheduleanappointment() {
   window.open('https://mail.google.com/mail/?view=cm&fs=1&to=gabrielotzmn@gmail.com', '_blank');
 }
 
